@@ -1,6 +1,15 @@
-const TodoItem = ({ itemProp }) => {
+const TodoItem = ({ itemProp, handleChange, deleteTodo }) => {
+
   return (
-    <li>{itemProp.title}</li>
+    <li>
+      <input
+        type="checkbox"
+        checked={itemProp.completed}
+        onChange={() => handleChange(itemProp.id)}
+      />
+      <button onClick={() => deleteTodo(itemProp.id)}>Delete</button>
+      {itemProp.title}
+    </li>
   )
 };
 
