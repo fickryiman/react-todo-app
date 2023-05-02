@@ -14,16 +14,22 @@ Create this app to implementing my knowledges about React, components, props, st
     - [How to build the "React Todo App"?](#how-to-build-the-react-todo-app)
     - [Projects list](#projects-list)
       - [Part 1 - Project Setup.](#part-1---project-setup)
-      - [Part 2 - Working with React form and handling event.](#part-2---working-with-react-form-and-handling-event)
-      - [Part 3 – Implement CSS in Reactjs app.](#part-3--implement-css-in-reactjs-app)
-      - [Part 4 – How to edit to dos items.](#part-4--how-to-edit-to-dos-items)
-      - [Part 5 – Persisting React state in local storage.](#part-5--persisting-react-state-in-local-storage)
-      - [Part 6 – React lifecycle methods.](#part-6--react-lifecycle-methods)
-      - [Part 7 – React hooks.](#part-7--react-hooks)
-      - [Part 8 – SVG icons in React.](#part-8--svg-icons-in-react)
-      - [Part 9 – Routing with React Router.](#part-9--routing-with-react-router)
-      - [Part 10 – Add hamburger menu in React.](#part-10--add-hamburger-menu-in-react)
-      - [Part 11 – Deploying React app to GitHub Pages.](#part-11--deploying-react-app-to-github-pages)
+      - [Part 2 - React Components and Data Model.](#part-2---react-components-and-data-model)
+      - [Part 3 – Managing State and Side-Effects.](#part-3--managing-state-and-side-effects)
+      - [Part 4 – Build React Form With This Best Practice.](#part-4--build-react-form-with-this-best-practice)
+      - [Part 5 – Raising and Handling Events in React.](#part-5--raising-and-handling-events-in-react)
+      - [Part 6 – Debug and optimize React apps.](#part-6--debug-and-optimize-react-apps)
+      - [Part 7 – Styling React Components.](#part-7--styling-react-components)
+      - [Part 8 – Add Editing functionality.](#part-8--add-editing-functionality)
+      - [Part 9 – Optimizing Performance in React.](#part-9--optimizing-performance-in-react)
+      - [Part 10 – Using LocalStorage with React.](#part-10--using-localstorage-with-react)
+      - [Part 11 – Adding React Icons.](#part-11--adding-react-icons)
+      - [Part 12 – Managing Application State.](#part-12--managing-application-state)
+      - [Part 13 – Managing React State.](#part-13--managing-react-state)
+      - [Part 14 – Routing with React Router.](#part-14--routing-with-react-router)
+      - [Part 15 – React children props.](#part-15--react-children-props)
+      - [Part 16 – Switch Navigation Widget.](#part-16--switch-navigation-widget)
+      - [Part 17 – Deploy React App With Vercel.](#part-17--deploy-react-app-with-vercel)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Tools i have used for this project ](#tools-i-have-used-for-this-project-)
@@ -54,16 +60,22 @@ This App, divided into several parts, is very comprehensive, and covers all main
 ### Projects list
 I have organized in the following sections:
 Part 1 - Project Setup.
-Part 2 - Working with React form and handling event.
-Part 3 – How to implement CSS in Reactjs app.
-Part 4 – How to edit to dos items.
-Part 5 – Persisting React state in local storage.
-Part 6 – Getting started with React lifecycle methods.
-Part 7 – Getting started with React hooks.
-Part 8 – How to use SVG icons in React.
-Part 9 – Routing with React Router.
-Part 10 – How to add hamburger menu in React.
-Part 11 – Deploying React app to GitHub Pages.
+Part 2 – React Components and Data Model.
+Part 3 – Managing State and Side-Effects.
+Part 4 – Build React Form With This Best Practice.
+Part 5 – Raising and Handling Events in React.
+Part 6 – Debug and optimize React apps.
+Part 7 – Styling React Components.
+Part 8 – Add Editing functionality.
+Part 9 – Optimizing Performance in React.
+Part 10 – Using LocalStorage with React.
+Part 11 – Adding React Icons.
+Part 12 – Managing Application State.
+Part 13 – Managing React State.
+Part 14 – Routing with React Router.
+Part 15 – React children props.
+Part 16 – Switch Navigation Widget.
+Part 17 – Deploy React App With Vercel.
 
 #### Part 1 - Project Setup.
 This is the first project of the Math Magicians application. I will set up the environment and tools needed to develop a React application. In the following projects, I will develop the actual application.
@@ -75,25 +87,37 @@ This is the first project of the Math Magicians application. I will set up the e
 - The easiest way to create a React application is using [Vite](https://vitejs.dev/)
 - The application should run in the browser without errors
 - 
-#### Part 2 - Working with React form and handling event.
+#### Part 2 - React Components and Data Model.
 
-#### Part 3 – Implement CSS in Reactjs app.
+#### Part 3 – Managing State and Side-Effects.
 
-#### Part 4 – How to edit to dos items.
+#### Part 4 – Build React Form With This Best Practice.
 
-#### Part 5 – Persisting React state in local storage.
+#### Part 5 – Raising and Handling Events in React.
 
-#### Part 6 – React lifecycle methods.
+#### Part 6 – Debug and optimize React apps.
 
-#### Part 7 – React hooks.
+#### Part 7 – Styling React Components.
 
-#### Part 8 – SVG icons in React.
+#### Part 8 – Add Editing functionality.
 
-#### Part 9 – Routing with React Router.
+#### Part 9 – Optimizing Performance in React.
 
-#### Part 10 – Add hamburger menu in React.
+#### Part 10 – Using LocalStorage with React.
 
-#### Part 11 – Deploying React app to GitHub Pages.
+#### Part 11 – Adding React Icons.
+
+#### Part 12 – Managing Application State.
+
+#### Part 13 – Managing React State.
+
+#### Part 14 – Routing with React Router.
+
+#### Part 15 – React children props.
+
+#### Part 16 – Switch Navigation Widget.
+
+#### Part 17 – Deploy React App With Vercel.
 
 
 ## 🛠 Built With <a name="built-with"></a>
