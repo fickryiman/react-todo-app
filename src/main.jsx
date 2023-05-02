@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(domContainer);
 
 root.render(
   <React.StrictMode>
-    <Navbar />
+    {/* <Navbar />
     <Modal />
-    <Form />
+    <Form /> */}
     <TodoApp />
   </React.StrictMode>
 );
