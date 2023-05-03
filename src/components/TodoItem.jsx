@@ -1,12 +1,14 @@
 import styles from '@/styles/TodoItem.module.css';
 import { useRef, useState } from 'react';
+import { useTodosContext } from '@/context/TodosContext';
+
 import { FaTrash } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 
-const TodoItem = ({ itemProp, handleChange, deleteTodo, setUpdate }) => {
+const TodoItem = ({ itemProp }) => {
 
   const [editing, setEditing] = useState(false);
-  const [updateInput, setUpdateInput] = useState(itemProp.title);
+  const { handleChange, deleteTodo, setUpdate } = useTodosContext();
   const editInputRef = useRef(null);
 
   const completedStyle = {
@@ -47,7 +49,7 @@ const TodoItem = ({ itemProp, handleChange, deleteTodo, setUpdate }) => {
           <AiFillEdit style={{ color: "#5e5e5e", fontSize: "16px" }} />
         </button>
         <button onClick={() => deleteTodo(itemProp.id)}>
-        <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
+          <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
         </button>
         <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
