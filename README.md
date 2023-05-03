@@ -197,7 +197,7 @@ This is the first project of the Math Magicians application. I will set up the e
 ## 🚀 Live Demo <a name=""></a>
 
 <!-- > Add a link to your deployed project. -->
-- Click the following url for [... Live Demo ...](https://react-todo-app-nine-iota.vercel.app/)
+- Click the following url for [... Live Demo ...](https://react-todo-app-fickryiman.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
