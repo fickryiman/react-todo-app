@@ -22,9 +22,11 @@ const Form = () => {
   const carBrands = ['Mercedes', 'BMW', 'Maserati', 'Infinity', 'Audi'];
 
   const carBrandOptions = carBrands.map((carBrand, key) => {
-    <option value={carBrand} key={key}>
-      {carBrand}
-    </option>;
+    return (
+      <option value={carBrand} key={key}>
+        {carBrand}
+      </option>
+    )
   });
 
   const handleSubmit = (e) => {
