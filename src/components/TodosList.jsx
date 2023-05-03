@@ -1,10 +1,9 @@
 import TodoItem from '@/components/TodoItem';
-import { useTodosStore } from '@/store';
+import { useTodosContext } from '@/context/TodosContext';
 
 const TodosList = () => {
+  const { todos } = useTodosContext();
   
-  const todos = useTodosStore((state) => state.todos);
-
   return (
     <ul>
       {todos.map((todo) => (
