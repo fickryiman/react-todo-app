@@ -1,10 +1,15 @@
-import { useState, useEffect, createContext, useContext } from "react";
+import {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+} from 'react';
+
 import { v4 as uuidv4 } from 'uuid';
 
 const TodosContext = createContext(null);
 
 export const TodosProvider = ({ children }) => {
-
   const [todos, setTodos] = useState(getInitialTodos());
 
   function getInitialTodos() {
@@ -21,7 +26,7 @@ export const TodosProvider = ({ children }) => {
   }, [todos]);
 
   const handleChange = (id) => {
-    setTodos((prevState) => 
+    setTodos((prevState) =>
       prevState.map((todo) => {
         if (todo.id === id) {
           return {
@@ -61,9 +66,9 @@ export const TodosProvider = ({ children }) => {
       })
     );
   };
-
+  
   return (
-    <TodosContext.Provider 
+    <TodosContext.Provider
       value={{
         todos,
         handleChange,

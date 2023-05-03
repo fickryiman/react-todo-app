@@ -1,19 +1,17 @@
-import styles from '@/styles/TodoItem.module.css';
-import { useRef, useState } from 'react';
-import { useTodosStore } from '@/store';
+import { useState, useRef } from 'react';
+import { useTodosContext } from '@/context/TodosContext';
 import { useAuthContext } from '@/context/AuthContext';
+import styles from '@/styles/TodoItem.module.css';
 
-import { FaTrash } from "react-icons/fa";
-import { AiFillEdit } from "react-icons/ai";
+import { FaTrash } from 'react-icons/fa';
+import { AiFillEdit } from 'react-icons/ai';
 
 const TodoItem = ({ itemProp }) => {
-  const handleChange = useTodosStore((state) => state.handleChange);
-  const deleteTodo = useTodosStore((state) => state.deleteTodo);
-  const setUpdate  = useTodosStore((state) => state.setUpdate);
+  const [editing, setEditing] = useState(false);
 
+  const { handleChange, deleteTodo, setUpdate } = useTodosContext();
   const { user } = useAuthContext();
 
-  const [editing, setEditing] = useState(false);
   const editInputRef = useRef(null);
 
   const completedStyle = {
@@ -33,7 +31,7 @@ const TodoItem = ({ itemProp }) => {
     viewMode.display = 'none';
   } else {
     editMode.display = 'none';
-  };
+  }
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
@@ -41,10 +39,9 @@ const TodoItem = ({ itemProp }) => {
       setEditing(false);
     }
   };
-
   return (
     <li className={styles.item}>
-      <div className={styles.content}>
+      <div className={styles.content} style={viewMode}>
         <input
           type="checkbox"
           checked={itemProp.completed}
@@ -57,18 +54,15 @@ const TodoItem = ({ itemProp }) => {
             />
           </button>
         )}
-        {/* <button onClick={handleEditing}>
-          <AiFillEdit style={{ color: "#5e5e5e", fontSize: "16px" }} />
-        </button> */}
         <button onClick={() => deleteTodo(itemProp.id)}>
-          <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
+          <FaTrash style={{ color: '#5e5e5e', fontSize: '16px' }} />
         </button>
         <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
         </span>
       </div>
-      <input 
-        type="text" 
+      <input
+        type="text"
         ref={editInputRef}
         defaultValue={itemProp.title}
         className={styles.textInput}
@@ -76,7 +70,7 @@ const TodoItem = ({ itemProp }) => {
         onKeyDown={handleUpdatedDone}
       />
     </li>
-  )
+  );
 };
 
 export default TodoItem;

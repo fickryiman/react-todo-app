@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import ProtectedRoute from '@/components/ProtectedRoute';
 
 import Home from '@/routes/Home';
 import About from '@/routes/About';
@@ -8,28 +7,29 @@ import Profile from '@/routes/Profile';
 import NotMatch from '@/routes/NotMatch';
 import Layout from '@/components/Layout';
 import SinglePage from '@/routes/SinglePage';
+import ProtectedRoute from '@/components/ProtectedRoute';
 
 const TodoApp = () => {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='about' element={<About />}>
-          <Route path=':slug' element={<SinglePage />} />
+        <Route path="about" element={<About />}>
+          <Route path=":slug" element={<SinglePage />} />
         </Route>
-        <Route path='login' element={<Login />} />
-        <Route 
-          path='profile' 
+        <Route path="login" element={<Login />} />
+        <Route
+          path="profile"
           element={
             <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route path='*' element={<NotMatch />} />
+        <Route path="*" element={<NotMatch />} />
       </Route>
     </Routes>
-  )
+  );
 };
 
 export default TodoApp;
