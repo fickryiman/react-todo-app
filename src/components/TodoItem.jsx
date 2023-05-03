@@ -1,6 +1,7 @@
 import styles from '@/styles/TodoItem.module.css';
 import { useRef, useState } from 'react';
 import { useTodosStore } from '@/store';
+import { useAuthContext } from '@/context/AuthContext';
 
 import { FaTrash } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
@@ -9,6 +10,8 @@ const TodoItem = ({ itemProp }) => {
   const handleChange = useTodosStore((state) => state.handleChange);
   const deleteTodo = useTodosStore((state) => state.deleteTodo);
   const setUpdate  = useTodosStore((state) => state.setUpdate);
+
+  const { user } = useAuthContext();
 
   const [editing, setEditing] = useState(false);
   const editInputRef = useRef(null);
@@ -47,9 +50,16 @@ const TodoItem = ({ itemProp }) => {
           checked={itemProp.completed}
           onChange={() => handleChange(itemProp.id)}
         />
-        <button onClick={handleEditing}>
+        {user && (
+          <button onClick={handleEditing}>
+            <AiFillEdit
+              style={{ color: '#5e5e5e', fontSize: '16px' }}
+            />
+          </button>
+        )}
+        {/* <button onClick={handleEditing}>
           <AiFillEdit style={{ color: "#5e5e5e", fontSize: "16px" }} />
-        </button>
+        </button> */}
         <button onClick={() => deleteTodo(itemProp.id)}>
           <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
         </button>
