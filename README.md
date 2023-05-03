@@ -143,6 +143,7 @@ This is the first project of the Math Magicians application. I will set up the e
     <li><a href="https://www.json.org/json-en.html">JSON</a></li>
     <li><a href="https://nodejs.org/en/">Node.js</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Session Storage</a></li>
   </ul>
 </details>
 

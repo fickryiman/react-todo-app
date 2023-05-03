@@ -7,7 +7,7 @@ const Header = (props) => {
     color: '#aeadad',
     textAlign: 'center',
   };
-  
+
   return (
     <header style={headerStyle} className={styles.header}>
       {props.children}
