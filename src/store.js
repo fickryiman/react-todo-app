@@ -8,7 +8,7 @@ const todosStore = (set) => ({
   addTodoItem: (title) => {
     const newTodo = {
       id: uuidv4(),
-      title: title,
+      title,
       completed: false,
     };
     set((state) => ({
@@ -17,9 +17,7 @@ const todosStore = (set) => ({
   },
   deleteTodo: (id) => {
     set((state) => ({
-      todos: state.todos.filter((todo) => {
-        return todo.id !== id;
-      }),
+      todos: state.todos.filter((todo) => todo.id !== id),
     }));
   },
   handleChange: (id) => {
@@ -51,5 +49,5 @@ export const useTodosStore = create(
   persist(todosStore, {
     name: 'todos',
     storage: createJSONStorage(() => sessionStorage),
-  })
+  }),
 );
