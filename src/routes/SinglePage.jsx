@@ -11,7 +11,7 @@ const aboutData = [
     slug: 'about-developer',
     title: 'About the developer',
     description:
-      'Fickry Bil Iman founded fickrybiliman.com to experiment with new web features and write actionable guides.',
+      'Fickry Bil Iman built this todo-app to experiment with new web features and write actionable guides.',
   },
 ];
 
